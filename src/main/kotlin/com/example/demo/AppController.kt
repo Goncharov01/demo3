@@ -19,7 +19,8 @@ import java.time.Instant
             return comment
         }
 //    @RequestMapping(value = "/comment", method = arrayOf(RequestMethod.POST))
-    @PostMapping
+    @PostMapping("/comments")
+
     fun createUser(@RequestBody newComment: NewComment): Comment {
         val comment = Comment(
                 author = newComment.author,
